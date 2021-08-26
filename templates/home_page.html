@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+
+<head>
+    <link rel = "stylesheet" href = "{% static 'static1.css' %}">
+</head>
+
+
+<body bgcolor="#AAAAAA">
+
+    <center><img src = "{% static 'images/banner_1.jpg' %}"></center>
+    <center><h1><u>{{h}}</u></h1></center>
+    <p>{{p}}</p>
+    <p>{{p_1}}</p>
+    <center><h2><u>{{h_1}}</u></h2></center>
+
+    
+    
+    <center>
+    <table border="2px;">
+        <thead>
+            <th>COURSE ID</th>
+            <th>COURSE NAME</th>
+            <th>COURSE FEE</th>
+            <th>COURSE DURATION</th>
+        </thead>
+        {% for i in c %}
+        <tr>
+            <td>{{i.c_id}}</td>
+            <td>{{i.c_name}}</td>
+            <td>{{i.c_fee}}</td>
+            <td>{{i.c_duration}}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+    </center>
+    <h5>Today's Date & Time is : {{dt}}</h5>
+    <button><a href="/app/gallery">gallery</a></button>
+
+
+
+
+
+</body>
+
+
+
+</html>
